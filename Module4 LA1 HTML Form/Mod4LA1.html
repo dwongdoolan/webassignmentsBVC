@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device=width, intitial-scale=1">
+    <title>HTML Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 8px;
+            width: 15%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #wrapper {
+            margin: auto;
+            width: 660px;
+            background-color: lightblue;
+            border-radius: 25px;
+            border: solid blue 3px;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 40%
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div style="padding-top: 15px">
+            <h2 style="text-align:center">Login Form</h2>
+        </div>
+        <div style="text-align:center">
+            <img src="avatar.png" alt="Avatar" width=150px class="rounded-circle">
+        </div>
+
+        <form action="/login.js" method="post">
+            <div class="container">
+                <label for="username">Name:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Name" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+                    required>
+                <br>
+                <p>Please confirm email is preferred contact method:</p>
+                <input type="radio" id="qyes" name="answer" value="yes">
+                <label for="qyes">Yes</label>
+                <br>
+                <input type="radio" id="qno" name="answer" value="no">
+                <label for="qno">No</label>
+                <br>
+                <p>Please select which day of the week you prefer to receive newsletter:</p>
+                <select name="dayofweek" size="4">
+                    <option value="Sunday">Sunday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                </select>
+                <br><br>
+                <button type="submit" value="submit">Send</button>
+                <br>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
