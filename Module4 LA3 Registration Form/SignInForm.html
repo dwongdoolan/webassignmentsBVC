@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device=width, intitial-scale=1">
+    <title>Sign In Form </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            margin:0px;
+        }
+
+        button {
+            background-color: #305A72;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            width: 25%;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #wrapper {
+            max-width: 660px;
+            background: #b7d2e1;
+            padding: 30px;
+            margin: 50px auto; 
+            box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+            border-radius: 10px;
+            border: 6px solid #305A72;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        #outerwrapper {
+            margin: 0px;
+            background-image: url('img/watercolour.jpg');
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outerwrapper">
+        <div id="wrapper">
+            <div style="text-align: center;">
+                <h2>Sign In Form</h2>
+            </div>
+            <form action="/login.js" method="post">
+                <div style="text-align: center;">
+                    <img src="img/avatar.png" alt="Avatar" width=150px class="rounded-circle">
+                </div>
+
+                <div class="container">
+
+                    <label for="firstname">First Name:</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" value="Enter First Name"
+                        required>
+                    <br>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" value="Enter Last Name"
+                        required>
+                    <br>
+
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    <br>
+                    <label for="email">Confirm Email:</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    <br>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="termsofuse" class="form-check-input">I Agree to Terms of Use
+                        </label>
+                    </div>
+                    <button type="submit" value="submit">Submit</button>
+                    <br>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
